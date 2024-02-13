@@ -28,3 +28,188 @@ a {
 em {
   font-style: normal;
 }
+
+/* 헤더 */
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+
+#header button {
+  width: 24px;
+  height: 24px;
+}
+
+#header button.back {
+  background: url('./images/back.svg') no-repeat center;
+  background-size: contain;
+}
+
+#header button.hamberger {
+  background: url('./images/menu.svg') no-repeat center;
+  background-size: contain;
+}
+
+/* 메인 */
+
+#main {
+  padding: 0 20px;
+}
+
+#main .contents-heading {
+  padding: 12px 0;
+}
+
+#main .contents-heading h2 {
+  line-height: 29px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#main .total-amount-frame {
+  margin-top: 12px;
+}
+
+#main .total-calendar-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+#main .total-calendar-wrap .total-calender {
+  line-height: 18px;
+  font-size: 15px;
+}
+
+#main .total-calendar-wrap .total-calendar-icon {
+  width: 24px;
+  height: 24px;
+  background: url('./images/calendar.svg') no-repeat center;
+  background-size: contain;
+}
+
+#main .total-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+#main .total-amount span {
+  line-height: 18px;
+  font-size: 15px;
+}
+
+#main .total-amoun strong {
+  line-height: 20px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+#main .total-select-frame {
+  padding: 16px;
+  border: 1px solid #d5d5d5;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.07);
+}
+
+#main .total-select-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12.5px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+#main .total-select-box .total-select-box-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#main .total-select-box .select-box-current {
+  display: block;
+  max-width: 227px;
+  line-height: 18px;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#main .total-select-box .select-box-arrow {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-left: 20px;
+  background: url('./images/select-arrow.svg') no-repeat center;
+  background-size: contain;
+  transition: 0.3s;
+}
+
+#main .total-select-box .select-box-arrow.active {
+  transform: rotate(-180deg);
+}
+
+#main .total-select-box-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  width: calc(100% + 2px);
+  border: 1px solid #e5e5e5;
+  border-bottom: 0;
+}
+
+#main .total-select-box-list.active {
+  display: block;
+}
+
+#main .total-select-box-list button {
+  width: 100%;
+  padding: 12.5px 16px;
+  text-align: left;
+  background-color: #fff;
+}
+
+#main .total-select-cont-wrap {
+  margin-top: 20px;
+}
+
+#main .total-select-cont {
+  display: none;
+}
+
+#main .total-select-cont.active {
+  display: block;
+}
+
+#main .total-select-cont li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+#main .total-select-cont li:last-of-type {
+  margin-bottom: 0;
+}
+
+#main .total-select-cont .total-title {
+  line-height: 18px;
+  font-size: 15px;
+}
+
+#main .total-select-cont .total-value {
+  line-height: 18px;
+  font-size: 15px;
+  font-weight: 700;
+}
