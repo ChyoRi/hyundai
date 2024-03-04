@@ -105,15 +105,7 @@ let tabContWidth = tabContList[0].clientWidth;
 
 const tabActive = (e) => {
   let target = e.currentTarget;
-  let targetOffsetX = target.offsetLeft;
-  let targetWidth = target.offsetWidth;
-  let tabBtnListCenter = tabBtnListClientWidth / 2;
   let idx = [...tabBtnList].indexOf(target);
-
-  console.log('DIV 센터값 ' + tabBtnListCenter);
-
-  console.log('target의 좌표값 ' + targetOffsetX);
-  console.log('target의 너비값 ' + targetWidth);
   
   tabBtnList.forEach(item => {
     item.children[0].classList.remove('active');
@@ -127,10 +119,6 @@ const tabActive = (e) => {
   tabContList[idx].classList.add('active');
   tabContListWrap.style.translate = `-${tabContWidth * idx}px 0`
 
-  if (targetOffsetX > tabBtnListCenter) {
-    console.log(targetOffsetX - targetWidth / 2);
-    tabBtnFrame.scrollLeft = tabBtnListCenter;
-  }
 }
 
 // tab prev, next 버튼

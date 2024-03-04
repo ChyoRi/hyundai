@@ -1,7 +1,9 @@
 const selectBoxBtn = document.querySelector('.total-select-box-btn');
 const selectBoxCurrentText = document.querySelector('.select-box-current');
 const selectBoxList = document.querySelector('.total-select-box-list');
-const selectOptionBtn = document.querySelectorAll('.total-select-box-list > li > button');
+const selectOptionItem = document.querySelectorAll('.total-select-box-item');
+const selectOptionBtn = document.querySelectorAll('.total-select-box-item > button');
+const selectTabCont = document.querySelectorAll('.total-select-cont');
 
 
 const selectBoxExpend = (e) => {
@@ -12,15 +14,25 @@ const selectBoxExpend = (e) => {
 
 const selectOption = (e) => {
   let target = e.currentTarget;
-  let targetIdx = target.getAttribute('data-id');
-  let targetText = target.innerText;
-  let currentText = selectBoxCurrentText.innerText;
-  selectBoxCurrentText.innerText = targetText;
-  target.innerText = currentText;
-  console.log(targetIdx);
+  let targetBtn = target.children[0];
+  let targetIdx = [...selectOptionItem].indexOf(target);
+  selectOptionBtn.forEach(item => {
+    item.classList.remove('active');
+  });
+
+  targetBtn.classList.add('active');
+
+  selectBoxCurrentText.innerText = target.innerText;
+
+  selectTabCont.forEach(item => {
+    item.classList.remove('active');
+  });
+
+  selectTabCont[targetIdx].classList.add('active');
+  selectBoxList.classList.remove('active');
 }
 
 selectBoxBtn.addEventListener('click', selectBoxExpend);
-selectOptionBtn.forEach(item => {
+selectOptionItem.forEach(item => {
   item.addEventListener('click', selectOption);
 });

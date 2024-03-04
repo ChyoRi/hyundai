@@ -181,6 +181,10 @@ em {
   background-color: #fff;
 }
 
+#main .total-select-box-list button.active {
+  background-color: #eee;
+}
+
 #main .total-select-cont-wrap {
   margin-top: 20px;
 }
